@@ -1,0 +1,116 @@
+// Colors - Base
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-lighter: #FAFAFA;
+$color-grey-light: #D6D6D6;
+$color-grey: #8D8D8D;
+$color-grey-dark: #444;
+$color-grey-darker: #1c1d22;
+
+$color-pink: #FF455B;
+$color-blue: #0166F5;
+
+
+$colors: (
+  'black': $color-black,
+  'blue': $color-blue,
+  'grey': $color-grey,
+  'grey-dark': $color-grey-dark,
+  'grey-darker': $color-grey-darker,
+  'pink': $color-pink,
+  'white': $color-white,
+);
+
+// Colors - Semantic
+$color-primary: $color-black;
+$color-secondary: $color-pink;
+$color-tertiary: $color-grey-dark;
+
+
+// Fonts
+$font-family-poppins: 'Poppins', 'Poppins Light', sans-serif;
+$font-family-poppins-regular: 'Poppins', sans-serif;
+$font-family-playfair: 'Playfair Display', sans-serif;
+
+$font-size-small: 1.2rem;
+$font-size-large: 3rem;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-bolder: bolder;
+
+// Fonts - Semantic
+$font-family-primary: $font-family-poppins;
+$font-family-secondary: $font-family-playfair;
+
+
+// Breakpoints
+$bp-to-desktop-widest: 1920px;
+
+$bp-from-desktop-wide: 1621px;
+$bp-to-desktop-wide: $bp-from-desktop-wide - 1px;
+
+$bp-from-desktop: 1321px;
+$bp-to-desktop: $bp-from-desktop - 1px;
+
+$bp-from-tablet: 1029px;
+$bp-to-tablet: $bp-from-tablet - 1px;
+
+$bp-from-tween: 769px;
+$bp-to-tween: $bp-from-tween - 1px;
+
+$bp-from-mobile: 481px;
+$bp-to-mobile: $bp-from-mobile - 1px;
+
+
+// Bootstrap Overrides
+$grid-columns: 12;
+$grid-gutter-width: 36px;
+$grid-row-columns: 6;
+
+$tabs-animation-duration: .3s;
+$tabs-animation-iteration-count: 1;
+$tabs-animation-timing-function: cubic-bezier(.2, 0.7, 1, 0.7);
+
+$enable-grid-classes: true;
+
+// Bootstrap Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: $bp-to-mobile,      // 480 px
+  tw: $bp-to-tween,       // 768 px
+  md: $bp-to-tablet,      // 1028 px
+  lg: $bp-to-desktop,     // 1320 px
+  xl: $bp-to-desktop-wide // 1620 px
+);
+
+// Bootstrap Containers
+$container-max-widths: (
+  sm: $bp-to-mobile - $grid-gutter-width,                //  480 - 36 =  444px
+  tw: $bp-to-tween - $grid-gutter-width - 166px,                 //  768 - 36 =  732px
+  md: $bp-to-tablet - $grid-gutter-width - 166px,                // 1028 - 36 =  992px
+  lg: $bp-to-desktop - $grid-gutter-width - 166px,               // 1320 - 36 = 1284px
+  xl: $bp-to-desktop-wide - ($grid-gutter-width * 1.5)   // 1620 - 54 = 1566px
+);
+
+// Utility classes... eg. text--center
+$distance-values-percentage: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto
+);
+
+// Z-Index
+$zIndex-fixed: 1500;
+$zIndex-fixed-nav: $zIndex-fixed + 100;
+
+// Transitions
+$transition-default: 0.4s ease-in;
