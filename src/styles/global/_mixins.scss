@@ -1,253 +1,253 @@
-// Media queries
-/* @include respond-to('mobile') {} */
-@mixin respond-to($breakpoint) {
-  @if $breakpoint=="mobile" {
-    @media (max-width: 480px) {
-      @content;
-    }
-  }
+// // Media queries
+// /* @include respond-to('mobile') {} */
+// @mixin respond-to($breakpoint) {
+//   @if $breakpoint=="mobile" {
+//     @media (max-width: 480px) {
+//       @content;
+//     }
+//   }
 
-  @else if $breakpoint=="tablet" {
-    @media (max-width: 769px) {
-      @content;
-    }
-  }
+//   @else if $breakpoint=="tablet" {
+//     @media (max-width: 769px) {
+//       @content;
+//     }
+//   }
 
-  @else if $breakpoint=="desktop" {
-    @media (max-width: 969px) {
-      @content;
-    }
-  }
+//   @else if $breakpoint=="desktop" {
+//     @media (max-width: 969px) {
+//       @content;
+//     }
+//   }
 
-  @else if $breakpoint=="wrapper" {
-    @media (max-width: 1170px) {
-      @content;
-    }
-  }
+//   @else if $breakpoint=="wrapper" {
+//     @media (max-width: 1170px) {
+//       @content;
+//     }
+//   }
 
-  @else {
-    @media ($breakpoint) {
-      @content;
-    }
-  }
-}
-
-
-// Centering
-/*
-.parent {
-position: relative;
-}
-.child {
-@include centered;
-}
-*/
-@mixin centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+//   @else {
+//     @media ($breakpoint) {
+//       @content;
+//     }
+//   }
+// }
 
 
-// Convert px to rem
-@function rem($size) {
-  $rem-size: $size / 16;
-  @return #{$rem-size}rem;
-}
+// // Centering
+// /*
+// .parent {
+// position: relative;
+// }
+// .child {
+// @include centered;
+// }
+// */
+// @mixin centered {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
 
 
-// functions to urlencode the svg string
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-  @return $string;
-}
-@function url-encode($string) {
-  $map: (
-   "%": "%25",
-   "<": "%3C",
-   ">": "%3E",
-   " ": "%20",
-   "!": "%21",
-   "*": "%2A",
-   "'": "%27",
-   '"': "%22",
-   "(": "%28",
-   ")": "%29",
-   ";": "%3B",
-   ":": "%3A",
-   "@": "%40",
-   "&": "%26",
-   "=": "%3D",
-   "+": "%2B",
-   "$": "%24",
-   ",": "%2C",
-   "/": "%2F",
-   "?": "%3F",
-   "#": "%23",
-   "[": "%5B",
-   "]": "%5D"
-   );
-  $new: $string;
-  @each $search, $replace in $map {
-    $new: str-replace($new, $search, $replace);
-  }
-  @return $new;
-}
-@function inline-svg($string) {
-  @return url('data:image/svg+xml;charset=US-ASCII,#{url-encode($string)}');
-}
+// // Convert px to rem
+// @function rem($size) {
+//   $rem-size: $size / 16;
+//   @return #{$rem-size}rem;
+// }
 
 
-// Nice underline effect.
-// $scale-x basically means visibility, 0 for hidden (will come in on hover), or 1 to be visible from the start.
-@mixin nice-underline ($color, $hover-color, $scale-x) {
-  position: relative;
-  text-decoration: none;
+// // functions to urlencode the svg string
+// @function str-replace($string, $search, $replace: '') {
+//   $index: str-index($string, $search);
+//   @if $index {
+//     @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+//   }
+//   @return $string;
+// }
+// @function url-encode($string) {
+//   $map: (
+//    "%": "%25",
+//    "<": "%3C",
+//    ">": "%3E",
+//    " ": "%20",
+//    "!": "%21",
+//    "*": "%2A",
+//    "'": "%27",
+//    '"': "%22",
+//    "(": "%28",
+//    ")": "%29",
+//    ";": "%3B",
+//    ":": "%3A",
+//    "@": "%40",
+//    "&": "%26",
+//    "=": "%3D",
+//    "+": "%2B",
+//    "$": "%24",
+//    ",": "%2C",
+//    "/": "%2F",
+//    "?": "%3F",
+//    "#": "%23",
+//    "[": "%5B",
+//    "]": "%5D"
+//    );
+//   $new: $string;
+//   @each $search, $replace in $map {
+//     $new: str-replace($new, $search, $replace);
+//   }
+//   @return $new;
+// }
+// @function inline-svg($string) {
+//   @return url('data:image/svg+xml;charset=US-ASCII,#{url-encode($string)}');
+// }
 
-  &::before {
-    background: $color;
-    bottom: -2px;
-    content: '';
-    height: 2px;
-    left: 0;
-    position: absolute;
-    transform: scaleX($scale-x);
-    transition: transform .3s cubic-bezier(.4, 0, .2, 1);
-    width: 100%;
-  }
 
-  &:hover::before {
-    background: $hover-color;
-    transform: scaleX(1);
-  }
-}
+// // Nice underline effect.
+// // $scale-x basically means visibility, 0 for hidden (will come in on hover), or 1 to be visible from the start.
+// @mixin nice-underline ($color, $hover-color, $scale-x) {
+//   position: relative;
+//   text-decoration: none;
 
-// Loading spinner
-@mixin loading-spinner($color: $gds-blue, $size: 21px, $thickness: 6) {
-  $svg: '<svg viewBox="-#{($thickness / 2)-1} -#{($thickness / 2)-1} #{36 + $thickness} #{36 + $thickness}" xmlns="http://www.w3.org/2000/svg" stroke="#{$color}"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="#{$thickness}"><circle stroke-opacity=".5" cx="18" cy="18" r="18"/><path d="M36 18c0-9.94-8.06-18-18-18"></path></g></g></svg>';
-  content: "";
-  position: absolute;
-  height: $size + 1;
-  width: $size;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg) ;
-  background-image: #{inline-svg($svg)};
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: spin 1s linear infinite;
-}
+//   &::before {
+//     background: $color;
+//     bottom: -2px;
+//     content: '';
+//     height: 2px;
+//     left: 0;
+//     position: absolute;
+//     transform: scaleX($scale-x);
+//     transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+//     width: 100%;
+//   }
+
+//   &:hover::before {
+//     background: $hover-color;
+//     transform: scaleX(1);
+//   }
+// }
+
+// // Loading spinner
+// @mixin loading-spinner($color: $gds-blue, $size: 21px, $thickness: 6) {
+//   $svg: '<svg viewBox="-#{($thickness / 2)-1} -#{($thickness / 2)-1} #{36 + $thickness} #{36 + $thickness}" xmlns="http://www.w3.org/2000/svg" stroke="#{$color}"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="#{$thickness}"><circle stroke-opacity=".5" cx="18" cy="18" r="18"/><path d="M36 18c0-9.94-8.06-18-18-18"></path></g></g></svg>';
+//   content: "";
+//   position: absolute;
+//   height: $size + 1;
+//   width: $size;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%) rotate(0deg) ;
+//   background-image: #{inline-svg($svg)};
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   animation: spin 1s linear infinite;
+// }
 
 
-@keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+// @keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
 
 
-@mixin font-size($min, $max) {
-	@include scale(font-size, $min, $max);
-}
-@mixin scale($property, $min, $max) {
-  $unit: unit($max);
-	$max: strip-unit($max);
-	$min: strip-unit($min);
-	$difference: $max - $min;
+// @mixin font-size($min, $max) {
+// 	@include scale(font-size, $min, $max);
+// }
+// @mixin scale($property, $min, $max) {
+//   $unit: unit($max);
+// 	$max: strip-unit($max);
+// 	$min: strip-unit($min);
+// 	$difference: $max - $min;
 
-	#{$property}: ($min + $difference) * 1#{$unit};
+// 	#{$property}: ($min + $difference) * 1#{$unit};
 
-	@media (max-width: $bp-to-desktop-wide) {
-		#{$property}: ($min + ($difference * 0.8)) * 1#{$unit};
-	}
+// 	@media (max-width: $bp-to-desktop-wide) {
+// 		#{$property}: ($min + ($difference * 0.8)) * 1#{$unit};
+// 	}
 
-	@media (max-width: $bp-to-desktop) {
-		#{$property}: ($min + ($difference * 0.6)) * 1#{$unit};
-	}
+// 	@media (max-width: $bp-to-desktop) {
+// 		#{$property}: ($min + ($difference * 0.6)) * 1#{$unit};
+// 	}
 
-	@media (max-width: $bp-to-tablet) {
-		#{$property}: ($min + ($difference * 0.4)) * 1#{$unit};
-	}
+// 	@media (max-width: $bp-to-tablet) {
+// 		#{$property}: ($min + ($difference * 0.4)) * 1#{$unit};
+// 	}
 
-	@media (max-width: $bp-to-tween) {
-		#{$property}: ($min + ($difference * 0.2)) * 1#{$unit};
-	}
+// 	@media (max-width: $bp-to-tween) {
+// 		#{$property}: ($min + ($difference * 0.2)) * 1#{$unit};
+// 	}
 
-	@media (max-width: $bp-to-mobile) {
-		#{$property}: $min * 1#{$unit};
-	}
-}
+// 	@media (max-width: $bp-to-mobile) {
+// 		#{$property}: $min * 1#{$unit};
+// 	}
+// }
 
-/**
- *
- */
-@mixin color-variant($parent, $color) {
-  .color-#{$parent} {
-    color: $color;
-    &--bg {
-      background-color: $color
-    }
-  }
-}
+// /**
+//  *
+//  */
+// @mixin color-variant($parent, $color) {
+//   .color-#{$parent} {
+//     color: $color;
+//     &--bg {
+//       background-color: $color
+//     }
+//   }
+// }
 
-@mixin custom-bg-variant($parent, $color, $text) {
-  #{$parent} {
-    background-color: $color !important;
-    // color: $text !important;
-  }
-  a#{$parent},
-  button#{$parent} {
-    &:hover,
-    &:focus {
-      background-color: lighten($color, 10%) !important;
-    }
-  }
-}
+// @mixin custom-bg-variant($parent, $color, $text) {
+//   #{$parent} {
+//     background-color: $color !important;
+//     // color: $text !important;
+//   }
+//   a#{$parent},
+//   button#{$parent} {
+//     &:hover,
+//     &:focus {
+//       background-color: lighten($color, 10%) !important;
+//     }
+//   }
+// }
 
-@function theme-color($key) {
-  @return map-get($colors, $key);
-}
+// @function theme-color($key) {
+//   @return map-get($colors, $key);
+// }
 
-@mixin default-button() {
-  display: inline-block;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
+// @mixin default-button() {
+//   display: inline-block;
+//   padding: 0;
+//   background-color: transparent;
+//   border: none;
+//   cursor: pointer;
+// }
 
-@mixin reset-list() {
-  margin: 0;
-  padding: 0;
-}
+// @mixin reset-list() {
+//   margin: 0;
+//   padding: 0;
+// }
 
-@mixin black-background {
-  background-color: $color-black;
-  color: $color-white;
+// @mixin black-background {
+//   background-color: $color-black;
+//   color: $color-white;
 
-  a {
-    color: $color-white;
+//   a {
+//     color: $color-white;
     
-    &:hover, 
-    &:focus {
-      color: $color-pink;
-    }
-  }
-}
+//     &:hover, 
+//     &:focus {
+//       color: $color-pink;
+//     }
+//   }
+// }
 
-@mixin imgcover {
-  position: relative;
-  overflow: hidden;
+// @mixin imgcover {
+//   position: relative;
+//   overflow: hidden;
 
-  img {
-    position: absolute;
-    min-width: 1000%;
-    min-height: 1000%;
-    max-width: none;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(0.1);
-    z-index: 0;
-  }
-}
+//   img {
+//     position: absolute;
+//     min-width: 1000%;
+//     min-height: 1000%;
+//     max-width: none;
+//     left: 50%;
+//     top: 50%;
+//     transform: translateX(-50%) translateY(-50%) scale(0.1);
+//     z-index: 0;
+//   }
+// }
