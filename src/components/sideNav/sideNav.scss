@@ -1,0 +1,27 @@
+@import '../../styles/variables/variables'; 
+
+.sideNavigator {
+    height: 100vh;
+    @media screen and  (max-width:769px){
+    height:65vh; 
+    }
+    background-color:$color-black ;
+    ul {
+        li {
+            padding: 10px;
+            &:hover {
+                background-color: $color-white;
+                a{
+                    color: $color-black;
+                }
+            }
+        }
+    }
+
+}
+.form {
+    padding-left : 10px;
+    margin-top : 10px;
+
+}
+

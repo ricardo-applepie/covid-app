@@ -3,12 +3,12 @@ import SideNav from '../components/sideNav/SideNav';
 import Overview from '../components/overview/Overview';
 function Home (){
     return (
-       <div className="container">
+       <div className="homepage">
             <div className="row align-items-start">
-                <div className="col">
+                <div className="col-lg-2">
                    <SideNav/>
                 </div>
-                <div className="col">
+                <div className="col-lg-10">
                     <Overview/>
                 </div>
             </div> 

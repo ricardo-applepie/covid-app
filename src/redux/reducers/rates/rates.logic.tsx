@@ -18,13 +18,12 @@ const fetchRatesLogic = createLogic({
     // your code here, hook into one or more of these execution
     // phases: validate, transform, and/or process
     process({ getState, action }, dispatch, done) {
-        console.log("api call");
+   
         axios
         
             .get(api)
             .then((resp) => {
                 dispatch(recieveRates(resp));
-                console.log(resp.data); 
 
             })
             .catch((err) => {

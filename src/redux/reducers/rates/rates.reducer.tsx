@@ -1,6 +1,5 @@
 import { ratesTypes } from "../rates/rates.types";
 
-console.log(ratesTypes.request)
 export const initialState = {
     messages: [
         {
@@ -21,7 +20,6 @@ export function ratesReducer(
 ){
     switch (action.type) {
         case ratesTypes.request:
-        console.log("loaded")
             return Object.assign({}, state, {
                 updatingHistory: true,
             });
