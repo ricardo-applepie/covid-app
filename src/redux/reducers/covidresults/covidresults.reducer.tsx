@@ -1,6 +1,8 @@
 import { covidResultsTypes ,dateOptionsTypes} from "./covidresults.types";
 export type Actions =
     | any
+
+ // initial redux state 
 export const initialState = {
     cases:[],
     dates:[],

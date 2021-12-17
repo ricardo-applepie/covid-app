@@ -19,7 +19,7 @@ const fetchcovidResults = createLogic({
 
     let client = new Client(); 
     client.get(`${endPoints.covidSituations.url}`).then((data:any)=>{     
-   
+     console.log(data.data)
     dispatch(recieveCovidResults(data.data))
     done()
     })

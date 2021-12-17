@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
-import { ratesReducer as rates } from './reducers/rates/rates.reducer';
 import {covidResultsReducer as covid} from './reducers/covidresults/covidresults.reducer';
+// combining all reducers . 
 
 export const createReducer = () => ({
-    rates,
     covid
 });
 

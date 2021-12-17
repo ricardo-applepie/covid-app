@@ -1,7 +1,10 @@
 import React from 'react'; 
 import SideNav from '../components/sideNav/SideNav';
 import Overview from '../components/overview/Overview';
+
+
 function Home (){
+
     return (
        <div className="homepage">
             <div className="row align-items-start">
@@ -13,7 +16,7 @@ function Home (){
                 </div>
             </div> 
       </div>
-
     )
 }
+
 export default Home; 
