@@ -1,4 +1,25 @@
 // writing simple react App Test , using Jest . 
+// import {covidResultsReducer} from '../redux/reducers/covidresults/covidresults.reducer'
+
+// test('should return the initial state', () => {
+//   expect(covidResultsReducer({}).toEqual(
+// {
+//     cases:[],
+//     dates:[],
+//     loaded: false,
+//     updating: false,
+//     error: false,
+//     loadingCovidResults: true,
+//     filterResults:{
+//         from:"", 
+//         to:""
+//     },
+//     options:[]
+// }
+//   )
+// })
+
+
 
 let array=[{chatdata:""}]
 test('adds 1 + 2 to equal 3', () => {
