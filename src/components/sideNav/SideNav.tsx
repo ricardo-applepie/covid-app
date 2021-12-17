@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import Button from '../button/Button';
 
 function SideNav (){
-  let covidDates :any= useSelector((state:any)=>state.covid.options);  
+  let covidDates :Array<'T'>= useSelector((state:any)=>state.covid.options);  
 
     return (
       <div className="sideNavigator">

@@ -5,7 +5,10 @@ event: any,
 fieldname: any
 }
 
-
+interface CovidResuits{
+    type:"string",
+    payload:Object
+}
 
 
 
@@ -18,7 +21,7 @@ export const requestCovidResults = function(fromToDate:any):any{
 } 
 //this action is called to update redux state 
 
-export const recieveCovidResults = function(covidResuits:any){
+export const recieveCovidResults = function(covidResuits:CovidResuits){
     return{
         type:covidResultsTypes.recieve, 
         payload:covidResuits
