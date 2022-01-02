@@ -1,28 +1,25 @@
-// writing simple react App Test , using Jest . 
-// import {covidResultsReducer} from '../redux/reducers/covidresults/covidresults.reducer'
+import {covidResultsReducer} from '../redux/reducers/covidresults/covidresults.reducer'
 
-// test('should return the initial state', () => {
-//   expect(covidResultsReducer({}).toEqual(
-// {
-//     cases:[],
-//     dates:[],
-//     loaded: false,
-//     updating: false,
-//     error: false,
-//     loadingCovidResults: true,
-//     filterResults:{
-//         from:"", 
-//         to:""
-//     },
-//     options:[]
-// }
-//   )
-// })
+test('should return the initial state', () => {
+  expect(covidResultsReducer({}).toEqual(
+{
+    cases:[],
+    dates:[],
+    loaded: false,
+    updating: false,
+    error: false,
+    loadingCovidResults: true,
+    filterResults:{
+        from:"",
+        to:""
+    },
+    options:[]
+}
+  )
+})
 
-
-
-let array=[{chatdata:""}]
-test('adds 1 + 2 to equal 3', () => {
+let array = [{ chatdata: "" }];
+test("adds 1 + 2 to equal 3", () => {
   expect(array.length).toBe(1);
 });
 
@@ -45,14 +42,11 @@ expect.extend({
   },
 });
 
-test('chart data', () => {
+test("chart data", () => {
   expect(100).toBeWithinRange(90, 110);
   expect(101).not.toBeWithinRange(0, 100);
-  expect({chatdata: 6, barChat: 3}).toEqual({
+  expect({ chatdata: 6, barChat: 3 }).toEqual({
     chatdata: expect.toBeWithinRange(1, 10),
     barChat: expect.not.toBeWithinRange(11, 20),
   });
 });
-
-
-

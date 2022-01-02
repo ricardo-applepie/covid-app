@@ -32,7 +32,6 @@
 //   }
 // }
 
-
 // // Centering
 // /*
 // .parent {
@@ -49,13 +48,11 @@
 //   transform: translate(-50%, -50%);
 // }
 
-
 // // Convert px to rem
 // @function rem($size) {
 //   $rem-size: $size / 16;
 //   @return #{$rem-size}rem;
 // }
-
 
 // // functions to urlencode the svg string
 // @function str-replace($string, $search, $replace: '') {
@@ -101,7 +98,6 @@
 //   @return url('data:image/svg+xml;charset=US-ASCII,#{url-encode($string)}');
 // }
 
-
 // // Nice underline effect.
 // // $scale-x basically means visibility, 0 for hidden (will come in on hover), or 1 to be visible from the start.
 // @mixin nice-underline ($color, $hover-color, $scale-x) {
@@ -143,9 +139,7 @@
 //   animation: spin 1s linear infinite;
 // }
 
-
 // @keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
-
 
 // @mixin font-size($min, $max) {
 // 	@include scale(font-size, $min, $max);
@@ -228,8 +222,8 @@
 
 //   a {
 //     color: $color-white;
-    
-//     &:hover, 
+
+//     &:hover,
 //     &:focus {
 //       color: $color-pink;
 //     }

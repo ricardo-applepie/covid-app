@@ -1,13 +1,6 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import Navbar from './components/navbar/navbar'; 
-
-
+import Navbar from "./components/navbar/navbar";
 
 export default function App() {
   return (
@@ -24,4 +17,3 @@ export default function App() {
     </Router>
   );
 }
-

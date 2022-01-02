@@ -1,14 +1,15 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import Typography from "@material-ui/core/Typography";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-const useStyles = makeStyles((theme:any) => ({
+// material ui component
+const useStyles = makeStyles((theme: any) => ({
   root: {
-    width: '100%',
+    width: "100%",
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -31,7 +32,8 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            We think from the data , the covid situation in Belgium Increases daily, we hope this reduces .  
+            We think from the data , the covid situation in Belgium Increases
+            daily, we hope this reduces .
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -44,9 +46,7 @@ export default function SimpleAccordion() {
           <Typography className={classes.heading}> From to To Date </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-          This little React app displays Belgium data . 
-          </Typography>
+          <Typography>This little React app displays Belgium data .</Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion disabled>
@@ -55,7 +55,9 @@ export default function SimpleAccordion() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography className={classes.heading}>Disabled Accordion</Typography>
+          <Typography className={classes.heading}>
+            Disabled Accordion
+          </Typography>
         </AccordionSummary>
       </Accordion>
     </div>
