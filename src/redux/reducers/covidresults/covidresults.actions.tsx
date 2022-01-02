@@ -1,7 +1,7 @@
 import {
   covidResultsTypes,
   dateOptionsTypes,
-} from "../covidresults/covidresults.types";
+} from '../covidresults/covidresults.types';
 
 interface Options {
   event: any;
@@ -9,7 +9,7 @@ interface Options {
 }
 
 interface CovidResuits {
-  type: "string";
+  type: 'string';
   payload: Object;
 }
 

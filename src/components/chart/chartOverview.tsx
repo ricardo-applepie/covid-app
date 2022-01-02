@@ -1,9 +1,9 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import ApexCharts from "apexcharts";
-import Chart from "react-apexcharts";
-import SimpleAccordion from "../accordion/Accordion";
-import "./chartOverView.scss";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import ApexCharts from 'apexcharts';
+import Chart from 'react-apexcharts';
+import SimpleAccordion from '../accordion/Accordion';
+import './chartOverView.scss';
 
 function ChartOverview(props: any) {
   // getting covidCases and covidDates from redux state ;
@@ -13,14 +13,14 @@ function ChartOverview(props: any) {
   let options: any = {
     series: [
       {
-        name: "Desktops",
+        name: 'Desktops',
         data: covidCases,
       },
     ],
     options: {
       chart: {
         height: 500,
-        type: "line",
+        type: 'line',
         zoom: {
           enabled: false,
         },
@@ -29,15 +29,15 @@ function ChartOverview(props: any) {
         enabled: false,
       },
       stroke: {
-        curve: "straight",
+        curve: 'straight',
       },
       title: {
-        text: "covid cases in Belgium  Graph  ",
-        align: "left",
+        text: 'covid cases in Belgium  Graph  ',
+        align: 'left',
       },
       grid: {
         row: {
-          colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+          colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
           opacity: 0.5,
         },
       },

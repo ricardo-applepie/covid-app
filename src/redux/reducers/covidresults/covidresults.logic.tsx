@@ -1,15 +1,15 @@
-import React from "react";
-import { createLogic } from "redux-logic";
-import axios from "axios";
-import { recieveCovidResults } from "./covidresults.actions";
-import { covidResultsTypes } from "./covidresults.types";
-import { endPoints } from "../../../config/endpoints";
-import { Client } from "../../../client/client";
+import React from 'react';
+import { createLogic } from 'redux-logic';
+import axios from 'axios';
+import { recieveCovidResults } from './covidresults.actions';
+import { covidResultsTypes } from './covidresults.types';
+import { endPoints } from '../../../config/endpoints';
+import { Client } from '../../../client/client';
 
 const fetchcovidResults = createLogic({
   // declarative built-in functionality wraps your code
   type: covidResultsTypes.request, // only apply this logic to this type
-  cancelType: "CANCEL_FETCH_POLLS", // cancel on this type
+  cancelType: 'CANCEL_FETCH_POLLS', // cancel on this type
   latest: true, // only take latest
 
   // your code here, hook into one or more of these execution
@@ -26,8 +26,8 @@ const fetchcovidResults = createLogic({
 
 const general = createLogic({
   // declarative built-in functionality wraps your code
-  type: "*", // only apply this logic to this type
-  cancelType: "CANCEL_FETCH_POLLS", // cancel on this type
+  type: '*', // only apply this logic to this type
+  cancelType: 'CANCEL_FETCH_POLLS', // cancel on this type
   latest: true, // only take latest
 
   // your code here, hook into one or more of these execution

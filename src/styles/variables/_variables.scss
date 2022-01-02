@@ -12,13 +12,13 @@ $color-pink: #ff455b;
 $color-blue: #0166f5;
 
 $colors: (
-  "black": $color-black,
-  "blue": $color-blue,
-  "grey": $color-grey,
-  "grey-dark": $color-grey-dark,
-  "grey-darker": $color-grey-darker,
-  "pink": $color-pink,
-  "white": $color-white,
+  'black': $color-black,
+  'blue': $color-blue,
+  'grey': $color-grey,
+  'grey-dark': $color-grey-dark,
+  'grey-darker': $color-grey-darker,
+  'pink': $color-pink,
+  'white': $color-white,
 );
 
 // Colors - Semantic
@@ -27,9 +27,9 @@ $color-secondary: $color-pink;
 $color-tertiary: $color-grey-dark;
 
 // Fonts
-$font-family-poppins: "Poppins", "Poppins Light", sans-serif;
-$font-family-poppins-regular: "Poppins", sans-serif;
-$font-family-playfair: "Playfair Display", sans-serif;
+$font-family-poppins: 'Poppins', 'Poppins Light', sans-serif;
+$font-family-poppins-regular: 'Poppins', sans-serif;
+$font-family-playfair: 'Playfair Display', sans-serif;
 
 $font-size-small: 1.2rem;
 $font-size-large: 3rem;
@@ -87,7 +87,7 @@ $grid-breakpoints: (
   // 1028 px
   lg: $bp-to-desktop,
   // 1320 px
-  xl: $bp-to-desktop-wide // 1620 px,
+  xl: $bp-to-desktop-wide // 1620 px,,
 );
 
 // Bootstrap Containers
@@ -104,7 +104,7 @@ $container-max-widths: (
     (
       $grid-gutter-width * 1.5,
     )
-    // 1620 - 54 = 1566px,
+    // 1620 - 54 = 1566px,,
 );
 
 // Utility classes... eg. text--center

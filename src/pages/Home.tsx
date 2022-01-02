@@ -1,6 +1,6 @@
-import React from "react";
-import SideNav from "../components/sideNav/SideNav";
-import Overview from "../components/overview/Overview";
+import React from 'react';
+import SideNav from '../components/sideNav/SideNav';
+import Overview from '../components/overview/Overview';
 
 // homepage
 function Home() {

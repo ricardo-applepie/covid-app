@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./sideNav.scss";
-import { useSelector } from "react-redux";
-import Button from "../button/Button";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './sideNav.scss';
+import { useSelector } from 'react-redux';
+import Button from '../button/Button';
 
 function SideNav() {
-  let covidDates: Array<"T"> = useSelector((state: any) => state.covid.options);
+  let covidDates: Array<'T'> = useSelector((state: any) => state.covid.options);
 
   return (
     <div className="sideNavigator">

@@ -1,5 +1,5 @@
-import { combineReducers } from "redux";
-import { covidResultsReducer as covid } from "./reducers/covidresults/covidresults.reducer";
+import { combineReducers } from 'redux';
+import { covidResultsReducer as covid } from './reducers/covidresults/covidresults.reducer';
 
 // combining all reducers .
 export const createReducer = () => ({

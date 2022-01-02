@@ -1,4 +1,4 @@
-import { covidResultsTypes, dateOptionsTypes } from "./covidresults.types";
+import { covidResultsTypes, dateOptionsTypes } from './covidresults.types';
 export type Actions = any;
 
 // initial redux state
@@ -10,8 +10,8 @@ export const initialState = {
   error: false,
   loadingCovidResults: true,
   filterResults: {
-    from: "",
-    to: "",
+    from: '',
+    to: '',
   },
   options: [],
 };
@@ -41,9 +41,9 @@ export function covidResultsReducer(state = initialState, action: Actions) {
         options: options,
       });
     case dateOptionsTypes.recieve:
-      let fieldname = "";
-      let date = "";
-      if (action.payload === "from") {
+      let fieldname = '';
+      let date = '';
+      if (action.payload === 'from') {
         fieldname = action.payload.fieldname;
         date = action.payload.event.value;
       } else {
